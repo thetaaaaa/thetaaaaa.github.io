@@ -1,0 +1,30 @@
+---
+layout: default
+title: "写作"
+---
+
+<div class="standfirst">
+  <p class="standfirst-zh">{{ site.tagline }}</p>
+  <p class="standfirst-en">{{ site.tagline_en }}</p>
+</div>
+
+<ol class="archive">
+  {%- for post in site.posts %}
+  <li class="entry">
+    <time class="entry-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m" }}</time>
+    <div class="entry-body">
+      <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {%- if post.title_en %}
+      <span class="entry-title-en">{{ post.title_en }}</span>
+      {%- endif %}
+      {%- if post.summary %}
+      <p class="entry-summary">{{ post.summary }}</p>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ol>
+
+{%- if site.posts.size == 0 %}
+<p class="empty">还没有文章。在 <code>_posts</code> 里新建一个 <code>2026-09-09-标题.md</code> 就会出现在这里。</p>
+{%- endif %}

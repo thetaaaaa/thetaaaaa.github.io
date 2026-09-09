@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="essay">
+
+  <div class="title-block">
+    <h1>{{ page.title }}</h1>
+    {%- if page.title_en %}
+    <p class="title-en">{{ page.title_en }}</p>
+    {%- endif %}
+  </div>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+</article>

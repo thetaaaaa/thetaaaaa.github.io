@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}" data-type="{{ site.typeface }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="masthead">
+  <a class="masthead-name" href="{{ '/' | relative_url }}">
+    <span class="masthead-name-zh">{{ site.title }}</span>
+    {%- if site.title_en and site.title_en != site.title %}
+    <span class="masthead-name-en">{{ site.title_en }}</span>
+    {%- endif %}
+  </a>
+  <nav class="masthead-nav">
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>写作</a>
+    <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>关于</a>
+  </nav>
+</header>
+
+<main id="main">
+  {{ content }}
+</main>
+
+{%- include footer.html -%}
+
+</body>
+</html>

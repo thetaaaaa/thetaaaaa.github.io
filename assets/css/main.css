@@ -1,0 +1,470 @@
+/* ==========================================================
+   印刷纸白 · 墨蓝黑 · 朱批红
+   一个字族，单栏，中文两端对齐，西文左对齐。
+   ========================================================== */
+
+:root {
+  --paper:      #f5f6f4;
+  --paper-well: #ebede8;
+  --ink:        #1c1e22;
+  --ink-soft:   #5a5f66;
+  --ink-faint:  #8b9096;
+  --rule:       #d8dbd6;
+  --seal:       #8e2c3b;
+
+  --latin: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --han: "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC",
+         "Noto Serif SC", "SimSun", serif;
+  --han-sans: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
+              "Microsoft YaHei", sans-serif;
+
+  --measure: 37rem;
+  --gutter: 1.5rem;
+}
+
+html[data-type="sans"] {
+  --han: var(--han-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #17191b;
+    --paper-well: #1f2124;
+    --ink:        #e2e4e0;
+    --ink-soft:   #a2a7a9;
+    --ink-faint:  #71767a;
+    --rule:       #2f3236;
+    --seal:       #cf6b74;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+body {
+  margin: 0;
+  padding: 0 var(--gutter) 5rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--latin), var(--han);
+  font-size: 1.125rem;
+  line-height: 1.68;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* 中文段落两端对齐：汉字等宽，不会出现西文那种断裂的空隙 */
+:lang(zh-Hans) .prose p,
+:lang(zh-Hans) .prose li,
+:lang(zh-Hans) .standfirst-zh {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  line-height: 1.9;
+}
+
+/* ── 顶栏 ────────────────────────────────────────────────── */
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: var(--gutter);
+  top: .5rem;
+  z-index: 10;
+  padding: .4rem .7rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.masthead {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.75rem 0 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.masthead-name {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.masthead-name-zh {
+  display: block;
+  font-family: var(--han), var(--latin);
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+.masthead-name-en {
+  display: block;
+  font-size: .8125rem;
+  color: var(--ink-faint);
+  letter-spacing: .01em;
+}
+
+.masthead-nav {
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--han), var(--latin);
+  font-size: .9375rem;
+}
+.masthead-nav a + a { margin-left: 1.25rem; }
+.masthead-nav { gap: 0; }
+.masthead-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.masthead-nav a:hover { color: var(--ink); border-bottom-color: var(--rule); }
+.masthead-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--seal);
+}
+
+/* ── 首页 ────────────────────────────────────────────────── */
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+/* 全站唯一的大动作：一道朱批竖线，把中英两行绑成一个单元 */
+.standfirst {
+  margin: 3.5rem 0 4rem;
+  padding-left: 1.125rem;
+  border-left: 2px solid var(--seal);
+}
+.standfirst p { margin: 0; }
+.standfirst-zh {
+  font-family: var(--han), var(--latin);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+.standfirst-en {
+  margin-top: .5rem !important;
+  font-size: .9375rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0 1.25rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+.entry:last-child { border-bottom: 1px solid var(--rule); }
+
+.entry-date {
+  font-size: .875rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  padding-top: .3rem;
+}
+
+.entry-title {
+  display: block;
+  font-family: var(--han), var(--latin);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+  text-decoration: none;
+}
+.entry-title:hover { color: var(--seal); }
+
+.entry-title-en {
+  display: block;
+  margin-top: .1875rem;
+  font-size: .875rem;
+  font-style: italic;
+  color: var(--ink-faint);
+}
+
+.entry-summary {
+  margin: .5rem 0 0;
+  font-family: var(--han), var(--latin);
+  font-size: .9375rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+.empty {
+  margin-top: 3rem;
+  color: var(--ink-soft);
+  font-family: var(--han), var(--latin);
+  font-size: .9375rem;
+}
+
+/* ── 文章 ────────────────────────────────────────────────── */
+
+.essay { margin-top: 3.5rem; }
+
+.title-block {
+  padding-left: 1.125rem;
+  border-left: 2px solid var(--seal);
+}
+.title-block h1 {
+  margin: 0;
+  font-family: var(--han), var(--latin);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -.005em;
+}
+.title-en {
+  margin: .4375rem 0 0;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.dateline {
+  margin: 1.25rem 0 2.75rem;
+  font-size: .875rem;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+.revised { margin-left: .75rem; }
+
+.prose > *:first-child { margin-top: 0; }
+
+.prose p { margin: 0 0 1.4em; }
+
+.prose h2 {
+  margin: 2.75rem 0 1rem;
+  font-family: var(--han), var(--latin);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+.prose h3 {
+  margin: 2rem 0 .75rem;
+  font-family: var(--han), var(--latin);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+}
+.prose a:hover {
+  color: var(--seal);
+  text-decoration-color: var(--seal);
+}
+
+.prose blockquote {
+  margin: 1.75rem 0;
+  padding: 0 0 0 1.125rem;
+  border-left: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 1.0625rem;
+}
+.prose blockquote p:last-child { margin-bottom: 0; }
+
+.prose ul, .prose ol { margin: 0 0 1.4em; padding-left: 1.4em; }
+.prose li { margin-bottom: .4em; }
+
+.prose hr {
+  margin: 2.75rem auto;
+  width: 3.5rem;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+.prose figure { margin: 2rem 0; }
+.prose figcaption {
+  margin-top: .625rem;
+  font-family: var(--han), var(--latin);
+  font-size: .8125rem;
+  line-height: 1.7;
+  color: var(--ink-faint);
+}
+
+.prose code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: .875em;
+  background: var(--paper-well);
+  padding: .1em .35em;
+  border-radius: 2px;
+}
+.prose pre {
+  margin: 1.75rem 0;
+  padding: 1rem 1.125rem;
+  background: var(--paper-well);
+  overflow-x: auto;
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+.prose pre code { background: none; padding: 0; }
+
+/* 外链的多媒体：保持 16:9，不撑破版心 */
+.embed {
+  margin: 2rem 0;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--paper-well);
+}
+.embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 脚注：朱批红只用在这里和那道竖线上 */
+.prose sup[id^="fnref"] a,
+.prose a.footnote {
+  color: var(--seal);
+  text-decoration: none;
+  font-size: .75em;
+  padding: 0 .1em;
+}
+.prose .footnotes {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: .9375rem;
+  color: var(--ink-soft);
+}
+.prose .footnotes ol { padding-left: 1.2em; }
+.prose .footnotes li { margin-bottom: .625em; line-height: 1.75; }
+.prose .footnotes p { margin: 0; }
+:lang(zh-Hans) .prose .footnotes p { text-align: left; }
+
+/* ── 前后篇 ──────────────────────────────────────────────── */
+
+.siblings {
+  max-width: var(--measure);
+  margin: 4rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.sibling {
+  text-decoration: none;
+  max-width: 48%;
+}
+.sibling-fwd { text-align: right; margin-left: auto; }
+.sibling-role {
+  display: block;
+  font-size: .8125rem;
+  color: var(--ink-faint);
+  font-family: var(--han), var(--latin);
+}
+.sibling-title {
+  display: block;
+  margin-top: .25rem;
+  font-family: var(--han), var(--latin);
+  font-size: .9375rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.sibling:hover .sibling-title { color: var(--seal); }
+
+/* ── 页脚 ────────────────────────────────────────────────── */
+
+.colophon {
+  max-width: var(--measure);
+  margin: 5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--han), var(--latin);
+  font-size: .875rem;
+}
+.colophon-links {
+  margin: 0 0 .5rem;
+  display: flex;
+  gap: 1.25rem;
+}
+.colophon-links { gap: 0; }
+.colophon-links a + a { margin-left: 1.25rem; }
+.colophon-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+.colophon-links a:hover { color: var(--seal); border-bottom-color: var(--seal); }
+.colophon-note { margin: 0; color: var(--ink-faint); font-size: .8125rem; }
+
+/* ── 焦点可见 ────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--seal);
+  outline-offset: 3px;
+}
+
+/* ── 窄屏 ────────────────────────────────────────────────── */
+
+@media (max-width: 34rem) {
+  body { font-size: 1.0625rem; padding-bottom: 3.5rem; }
+  .masthead { padding-top: 1.75rem; }
+  .standfirst { margin: 2.5rem 0 3rem; }
+  .standfirst-zh { font-size: 1.125rem; }
+  .entry {
+    grid-template-columns: 1fr;
+    gap: .375rem;
+  }
+  .entry-date { padding-top: 0; }
+  .title-block h1 { font-size: 1.5rem; }
+  .siblings { flex-direction: column; gap: 1.25rem; }
+  .sibling, .sibling-fwd { max-width: 100%; text-align: left; margin-left: 0; }
+}
+
+/* ── 打印：给要打出来读的人 ──────────────────────────────── */
+
+@media print {
+  :root {
+    --paper: #fff; --ink: #000; --ink-soft: #333;
+    --ink-faint: #555; --rule: #bbb; --seal: #000;
+  }
+  body { font-size: 11pt; padding: 0; }
+  .masthead-nav, .siblings, .colophon-links, .skip { display: none; }
+  .prose a { text-decoration: none; }
+  .prose a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: .8em;
+    color: #555;
+    word-break: break-all;
+  }
+  .embed { display: none; }
+  .prose h2, .prose h3 { break-after: avoid; }
+  .prose blockquote, .prose figure { break-inside: avoid; }
+}

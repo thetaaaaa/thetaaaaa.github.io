@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────────────────────
+#  只有这一段需要你改。改完保存、推送，站点就是你的了。
+# ─────────────────────────────────────────────────────────────
+
+title: "Litao"                       # 站点名 / 你的名字
+title_en: "Litao"                    # 拉丁文写法，显示在名字下方
+tagline: "国际关系理论、政治哲学，以及一些日常的困惑。"
+tagline_en: "Notes on international relations theory and political philosophy."
+
+email: "you@example.com"             # 页脚的联系邮箱
+url: "https://USERNAME.github.io"    # 换成你的 GitHub 用户名
+baseurl: ""                          # 用 USERNAME.github.io 仓库就留空
+
+# ─────────────────────────────────────────────────────────────
+#  下面一般不用动
+# ─────────────────────────────────────────────────────────────
+
+lang: "zh"
+description: "国际关系理论、政治哲学的写作与笔记。"
+
+# 正文字体：想换成黑体（Windows 下屏显更清晰），把 serif 改成 sans
+typeface: serif
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  footnote_nr: 1
+  syntax_highlighter: rouge
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+permalink: /:year/:slug/
+timezone: America/New_York
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
