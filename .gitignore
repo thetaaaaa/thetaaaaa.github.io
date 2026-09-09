@@ -1,0 +1,9 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler (本地预览用，不入库)
+vendor/
+.bundle/
+Gemfile.lock
