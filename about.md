@@ -11,7 +11,7 @@ permalink: /about/
 
 写作同时用中文和英文。这两套学术对话之间的空隙，是我觉得最有意思的地方。
 
-站点没有评论区。想聊的话，[写信给我](mailto:{{ site.email }})，我会回。
+站点没有评论区。想聊的话，[写信给我](mailto:{{ site.email }})，我会回。写作之外的东西——笔记的源码、零散的小工具——都放在 [GitHub](https://github.com/{{ site.github_username }})。
 
 <hr>
 
@@ -19,4 +19,4 @@ Replace this with your own English introduction. Keep it short — one paragraph
 
 I'm spending a year as a visiting scholar at Harvard, working on the conditions under which war becomes unavoidable, and on what bargaining-failure and commitment-problem accounts actually explain.
 
-There are no comments here. If something's worth arguing about, [write to me](mailto:{{ site.email }}).
+There are no comments here. If something's worth arguing about, [write to me](mailto:{{ site.email }}). Code and side projects live on [GitHub](https://github.com/{{ site.github_username }}).
