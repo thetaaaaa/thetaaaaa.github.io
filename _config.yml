@@ -56,4 +56,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
-  - wiki

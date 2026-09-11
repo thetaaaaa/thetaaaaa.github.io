@@ -12,13 +12,4 @@ Jekyll 静态站点，用 GitHub Pages 原生构建，不需要配置 GitHub Act
 
 ## 文档
 
-详细使用说明在 `wiki/` 目录：
-
-- [Home](wiki/Home.md)
-- [快速上线](wiki/快速上线.md)
-- [站点个性化配置](wiki/站点个性化配置.md)
-- [日常写作指南](wiki/日常写作指南.md)
-- [字体与本地预览](wiki/字体与本地预览.md)
-- [注意事项](wiki/注意事项.md)
-
-> 要发布到 GitHub Wiki，可直接复制 `wiki/` 目录中的页面内容。
+搭建步骤、配置字段、日常写作的格式约定、字体切换、本地预览和几条容量与隐私上的注意事项，都写在站内这篇文章里：[这个站点是怎么搭的](https://thetaaaaa.github.io/2026/colophon/)。
