@@ -5,18 +5,20 @@ title_en: "About"
 permalink: /about/
 ---
 
-这一段换成你自己的话。写你在想什么问题，而不是罗列头衔——头衔说明你在哪个位置，问题说明你往哪走，后者才让人想留下来读。
+南京大学图书情报学博士生，现在在哈佛量化社会科学研究所（IQSS）做 fellow。
 
-我在哈佛访学一年，主要关心国际关系理论里那些看上去已经定论、其实远没有定论的地方：战争在什么条件下真的不可避免，讨价还价失败和承诺问题各自解释了多少，安全困境作为一个概念到底还剩多少解释力。
+这里写两类东西。一类是在美国的生活观察——看到的、不太习惯的、想了一阵才明白过来的事。另一类是方法：一个数据集从零到能用要经过什么，配套的程序怎么写，哪些规范值得守，哪些工具真的省时间。这类文章多半拿 CBDB（中国历代人物传记资料库）当例子，因为它是我手上最熟的一个，也因为它的坑足够多，讲清楚一个就能省别人半天。
 
-写作同时用中文和英文。这两套学术对话之间的空隙，是我觉得最有意思的地方。
+中文和英文都写。这两套对话之间的空隙，是我觉得最有意思的地方。
 
-站点没有评论区。想聊的话，[写信给我](mailto:{{ site.email }})，我会回。写作之外的东西——笔记的源码、零散的小工具——都放在 [GitHub](https://github.com/{{ site.github_username }})。
+站点没有评论区。想聊的话，[写信给我](mailto:{{ site.email }})，我会回。零散的小工具和科研项目的源码放在 [GitHub](https://github.com/{{ site.github_username }})。
 
 <hr>
 
-Replace this with your own English introduction. Keep it short — one paragraph about the questions you're working on, one about how to reach you.
+I'm a PhD student in library and information science at Nanjing University, currently a fellow at Harvard's Institute for Quantitative Social Science (IQSS).
 
-I'm spending a year as a visiting scholar at Harvard, working on the conditions under which war becomes unavoidable, and on what bargaining-failure and commitment-problem accounts actually explain.
+Two kinds of writing live here. One is observation — a year of living in the United States, and the things that took me a while to understand. The other is method: what it actually takes to get a dataset from nothing to usable, how to write the code around it, which conventions are worth following, and which tools genuinely save time. Most of those notes use CBDB (the China Biographical Database) as the worked example, because it's the project I know best and because it has enough pitfalls that explaining one saves someone else an afternoon.
 
-There are no comments here. If something's worth arguing about, [write to me](mailto:{{ site.email }}). Code and side projects live on [GitHub](https://github.com/{{ site.github_username }}).
+I write in both Chinese and English; the gap between those two conversations is the part I find most interesting.
+
+There are no comments here. If something's worth arguing about, [write to me](mailto:{{ site.email }}). Small tools and code from research projects live on [GitHub](https://github.com/{{ site.github_username }}).

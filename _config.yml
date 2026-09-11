@@ -4,10 +4,10 @@
 
 title: "Litao"                       # 站点名 / 你的名字
 title_en: "Litao"                    # 拉丁文写法，显示在名字下方
-tagline: "国际关系理论、政治哲学，以及一些日常的困惑。"
-tagline_en: "Notes on international relations theory and political philosophy."
+tagline: "在美国的生活观察，以及数据集和程序该怎么做——多半拿 CBDB 当例子。"
+tagline_en: "Notes from a year in the US, and on how research datasets actually get built."
 
-email: "you@example.com"             # 页脚的联系邮箱
+email: "litaolin@fas.harvard.edu"    # 页脚的联系邮箱
 github_username: "thetaaaaa"        # GitHub 用户名，页脚和「关于」页会链到你的主页
 url: "https://thetaaaaa.github.io"    # 换成你的 GitHub 用户名
 baseurl: ""                          # 用 USERNAME.github.io 仓库就留空
@@ -17,7 +17,7 @@ baseurl: ""                          # 用 USERNAME.github.io 仓库就留空
 # ─────────────────────────────────────────────────────────────
 
 lang: "zh"
-description: "国际关系理论、政治哲学的写作与笔记。"
+description: "在美国的生活观察，以及数据集建设、程序开发的规范方法与工具推荐，以 CBDB 为例。"
 
 # 正文字体：想换成黑体（Windows 下屏显更清晰），把 serif 改成 sans
 typeface: serif
