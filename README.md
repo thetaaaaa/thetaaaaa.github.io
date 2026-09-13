@@ -1,6 +1,6 @@
 # thetaaaaa.github.io
 
-个人站点的源码。站点本身在 **<https://litaolin.com>**。
+个人站点的源码。站点本身在 **<https://www.litaolin.com>**。
 
 写两类东西：在美国的生活观察，以及数据集建设和程序开发的规范方法与工具推荐——后者多半拿 CBDB（中国历代人物传记资料库）当例子。作者是南京大学图书情报学博士生，现为哈佛量化社会科学研究所（IQSS）fellow。[关于页](https://litaolin.com/about/) · [RSS](https://litaolin.com/feed.xml)
 
@@ -8,7 +8,7 @@
 
 ## 技术说明
 
-Jekyll 静态站点，用 GitHub Pages 原生构建，不需要配置 GitHub Actions。推送即发布，没有后端、没有第三方追踪脚本。文章是 `_posts/` 下的 Markdown 文件。
+Jekyll 静态站点，用 GitHub Pages 原生构建，不需要配置 GitHub Actions。推送即发布，没有后端。站点走 Cloudflare，访问统计由 Cloudflare Web Analytics 在边缘注入，不使用 cookie，仓库里没有相关代码。文章是 `_posts/` 下的 Markdown 文件。
 
 ## 文档
 
