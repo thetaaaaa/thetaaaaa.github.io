@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="立">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .field { fill: #c24a59; }
+    }
+  </style>
+  <rect class="field" width="48" height="48" rx="5" fill="#8e2c3b"/>
+  <path fill="#f5f6f4" fill-rule="evenodd" d="M 21.8 8 26.2 8 26.2 13.6 21.8 13.6 Z M 13 16.8 35 16.8 35 20.8 13 20.8 Z M 17.4 24 21 24 17.2 31.2 13.6 31.2 Z M 27 24 30.6 24 34.4 31.2 30.8 31.2 Z M 8.5 33.6 39.5 33.6 39.5 38.2 8.5 38.2 Z"/>
+</svg>
