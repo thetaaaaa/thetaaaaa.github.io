@@ -17,6 +17,7 @@ baseurl: ""                          # 用 USERNAME.github.io 仓库就留空
 # ─────────────────────────────────────────────────────────────
 
 lang: "zh"
+locale: "zh_CN"                      # og:locale 用下划线格式，seo-tag 读的是这个键
 description: "在美国的生活观察，以及数据集建设、程序开发的规范方法与工具推荐，以 CBDB 为例。"
 
 # 正文字体：想换成黑体（Windows 下屏显更清晰），把 serif 改成 sans
@@ -50,6 +51,11 @@ defaults:
       path: ""
     values:
       layout: "page"
+      image:                           # 分享预览图；某篇想单独换，在它的 front matter 里覆盖
+        path: /assets/img/og-card.png
+        width: 1200
+        height: 630
+        alt: "朱批红白文印「立」"
 
 exclude:
   - Gemfile

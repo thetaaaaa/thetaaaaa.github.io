@@ -1,0 +1,16 @@
+{
+  "name": "Litao",
+  "short_name": "Litao",
+  "description": "在美国的生活观察，以及数据集建设、程序开发的规范方法与工具推荐，以 CBDB 为例。",
+  "lang": "zh-Hans",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "background_color": "#f5f6f4",
+  "theme_color": "#f5f6f4",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
