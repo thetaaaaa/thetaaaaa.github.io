@@ -9,7 +9,7 @@ tagline_en: "Notes from a year in the US, and on how research datasets actually 
 
 email: "litaolin@fas.harvard.edu"    # 页脚的联系邮箱
 github_username: "thetaaaaa"        # GitHub 用户名，页脚和「关于」页会链到你的主页
-url: "https://thetaaaaa.github.io"    # 换成你的 GitHub 用户名
+url: "https://litaolin.com"    # 换成你的 GitHub 用户名
 baseurl: ""                          # 用 USERNAME.github.io 仓库就留空
 
 # ─────────────────────────────────────────────────────────────
