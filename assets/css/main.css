@@ -352,34 +352,6 @@ main {
   .heading-anchor { opacity: .45; }
 }
 
-/* ── 代码块复制 ──────────────────────────────────────────── */
-
-.has-copy { position: relative; }
-.copy-btn {
-  position: absolute;
-  top: .5rem;
-  right: .5rem;
-  padding: .15em .5em;
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  background: var(--paper);
-  color: var(--ink-faint);
-  font-family: var(--han), var(--latin);
-  font-size: .75rem;
-  line-height: 1.6;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity .12s ease, color .12s ease, border-color .12s ease;
-}
-.has-copy:hover .copy-btn,
-.copy-btn:focus-visible { opacity: 1; }
-.copy-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
-.copy-btn.is-done { color: var(--seal); border-color: var(--seal); opacity: 1; }
-
-@media (hover: none) {
-  .copy-btn { opacity: .7; }
-}
-
 /* 外链的多媒体：保持 16:9，不撑破版心 */
 .embed {
   margin: 2rem 0;
@@ -506,7 +478,7 @@ main {
   }
   body { font-size: 11pt; padding: 0; }
   .masthead-nav, .siblings, .colophon-links, .skip { display: none; }
-  .heading-anchor, .copy-btn { display: none; }
+  .heading-anchor { display: none; }
   .prose a { text-decoration: none; }
   .prose a[href^="http"]::after {
     content: " (" attr(href) ")";
