@@ -27,6 +27,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   footnote_nr: 1
+  toc_levels: 2..3
   syntax_highlighter: rouge
   smart_quotes: ["apos", "apos", "quot", "quot"]
 

@@ -331,6 +331,40 @@ main {
 }
 .prose pre code { background: none; padding: 0; }
 
+/* ── 文章目录（kramdown 的 {:toc}）────────────────────────── */
+
+#markdown-toc {
+  margin: 2rem 0 2.5rem;
+  padding: 1.125rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  list-style: none;
+  font-family: var(--han), var(--latin);
+  font-size: .875rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+#markdown-toc li { margin: 0; }
+#markdown-toc ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+#markdown-toc ul li::before {
+  content: "—";
+  margin-right: .4em;
+  color: var(--ink-faint);
+}
+#markdown-toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+#markdown-toc a:hover {
+  color: var(--seal);
+  border-bottom-color: var(--seal);
+}
+
 /* ── 标题锚 ──────────────────────────────────────────────── */
 
 .heading-anchor {
@@ -479,6 +513,7 @@ main {
   body { font-size: 11pt; padding: 0; }
   .masthead-nav, .siblings, .colophon-links, .skip { display: none; }
   .heading-anchor { display: none; }
+  #markdown-toc { display: none; }
   .prose a { text-decoration: none; }
   .prose a[href^="http"]::after {
     content: " (" attr(href) ")";
