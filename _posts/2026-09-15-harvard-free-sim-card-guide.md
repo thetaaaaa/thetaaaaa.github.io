@@ -22,7 +22,7 @@ lang: zh
 **（1）US Mobile。** 哈佛免费提供 Starter Kit 套装，内含两张卡，分别连接至不同蜂窝网络运营商：Warp（Verizon）和 Dark Star（AT&T）。哈佛额外提供了官方的校园优惠码。
 
 <figure>
-  <img src="{{ '/assets/images/harvard-us-mobile-student-discount.jpg' | relative_url }}" alt="哈佛 HIO 展示的 US Mobile 校园专属优惠码">
+  <img src="{{ '/assets/images/harvard-us-mobile-student-discount-v2.jpg' | relative_url }}" alt="哈佛 HIO 展示的 US Mobile 校园专属优惠码">
   <figcaption>HIO 展示的 US Mobile 哈佛校园优惠码。</figcaption>
 </figure>
 
