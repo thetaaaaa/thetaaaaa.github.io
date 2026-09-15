@@ -1,6 +1,6 @@
 ---
-title: "哈佛大学免费电话卡攻略：美国三网评测"
-title_en: "Harvard Free SIM Card Guide: U.S. Three-Network Review"
+title: "哈佛大学免费电话卡攻略：三大运营商横评"
+title_en: "Harvard Free SIM Card Guide: Three Major U.S. Carriers Compared"
 summary: "哈佛 HIO 免费电话卡的领取地点、US Mobile 与 Mint 套餐对比，以及 Warp、Dark Star、Light Speed 的实际使用体验。"
 date: 2026-09-15
 lang: zh
