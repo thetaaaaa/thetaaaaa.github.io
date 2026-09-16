@@ -13,7 +13,7 @@ permalink: /about/
 
 中文和英文都写。
 
-站点没有评论区。想聊的话，[写信给我](mailto:{{ site.email }})，我会回。零散的小工具和科研项目的源码放在 [GitHub](https://github.com/{{ site.github_username }})。
+站点没有评论区。想聊的话，[写信给我](mailto:{{ site.email }})，我会回。零散的小工具和科研项目的源码放在 [GitHub](https://github.com/{{ site.github_username }})，更日常的记录在 [小红书]({{ site.xiaohongshu_url }})，学术发表见 [ORCID]({{ site.orcid_url }})。
 
 <hr>
 
@@ -25,4 +25,4 @@ My master's work was in computational humanities — what is more often called d
 
 I write in both Chinese and English.
 
-There are no comments here. If something's worth arguing about, [write to me](mailto:{{ site.email }}). Small tools and code from research projects live on [GitHub](https://github.com/{{ site.github_username }}).
+There are no comments here. If something's worth arguing about, [write to me](mailto:{{ site.email }}). Small tools and code from research projects live on [GitHub](https://github.com/{{ site.github_username }}); more everyday notes, in Chinese, are on [Xiaohongshu]({{ site.xiaohongshu_url }}); publications are listed on [ORCID]({{ site.orcid_url }}).

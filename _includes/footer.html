@@ -5,6 +5,12 @@
     {%- if site.github_username %}
     <a href="https://github.com/{{ site.github_username }}" rel="me noopener">GitHub</a>
     {%- endif %}
+    {%- if site.xiaohongshu_url %}
+    <a href="{{ site.xiaohongshu_url }}" rel="me noopener">小红书</a>
+    {%- endif %}
+    {%- if site.orcid_url %}
+    <a href="{{ site.orcid_url }}" rel="me noopener">ORCID</a>
+    {%- endif %}
   </p>
   <p class="colophon-note">
     {{ 'now' | date: "%Y" }} 年，{{ site.title }}。文章欢迎转载，请注明出处。
