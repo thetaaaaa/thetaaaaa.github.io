@@ -11,7 +11,7 @@ lang: zh
 哈佛大学提供免费的电话卡，在 **Smith Campus Center 8 楼 HIO（Harvard International Office）办公室门口**领取，给楼下保安看护照即可上楼。
 
 <figure>
-  <img src="{{ '/assets/images/harvard-hio-sim-card-pickup.jpg' | relative_url }}" alt="哈佛 HIO 办公室门口的电话卡领取处">
+  <img src="{{ '/assets/img/harvard-hio-sim-card-pickup.jpg' | relative_url }}" alt="哈佛 HIO 办公室门口的电话卡领取处">
   <figcaption>HIO 办公室门口的电话卡领取处。</figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ lang: zh
 **（1）US Mobile。** 哈佛免费提供 Starter Kit 套装，内含两张卡，分别连接至不同蜂窝网络运营商：Warp（Verizon）和 Dark Star（AT&T）。哈佛额外提供了官方的校园优惠码。
 
 <figure>
-  <img src="{{ '/assets/images/harvard-us-mobile-student-discount-v2.jpg' | relative_url }}" alt="哈佛 HIO 展示的 US Mobile 校园专属优惠码">
+  <img src="{{ '/assets/img/harvard-us-mobile-student-discount-v2.jpg' | relative_url }}" alt="哈佛 HIO 展示的 US Mobile 校园专属优惠码">
   <figcaption>HIO 展示的 US Mobile 哈佛校园优惠码。</figcaption>
 </figure>
 
