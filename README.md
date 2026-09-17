@@ -8,7 +8,7 @@
 
 ## 技术说明
 
-Jekyll 静态站点，用 GitHub Pages 原生构建，不需要配置 GitHub Actions。推送即发布，没有后端。站点走 Cloudflare，访问统计由 Cloudflare Web Analytics 在边缘注入，不使用 cookie，仓库里没有相关代码。文章是 `_posts/` 下的 Markdown 文件。
+Jekyll 4 静态站点，由 GitHub Actions 构建、发布到 GitHub Pages。推送到 `main` 即发布，没有后端。站点走 Cloudflare，访问统计由 Cloudflare Web Analytics 在边缘注入，不使用 cookie，仓库里没有相关代码。文章是 `_posts/` 下的 Markdown 文件。
 
 ## 文档
 

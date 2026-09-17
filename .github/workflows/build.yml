@@ -1,0 +1,47 @@
+name: 构建并发布
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # 也可以在 Actions 页面手动点一次
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 连续推送时取消上一次未跑完的构建，只发布最新的那次
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true     # 缓存依赖，之后每次省掉装 gem 的时间
+
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: 构建
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
