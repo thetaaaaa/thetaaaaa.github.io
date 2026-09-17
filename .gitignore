@@ -8,6 +8,9 @@ vendor/
 .bundle/
 Gemfile.lock
 
+# Claude Code 的本机设置（settings.json 可入库，local 那份不入库）
+.claude/settings.local.json
+
 # Obsidian：配置入库，但界面状态和插件代码不入库
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
