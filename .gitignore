@@ -3,7 +3,14 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# Bundler (本地预览用，不入库)
+# Bundler（本地预览用，不入库）
 vendor/
 .bundle/
 Gemfile.lock
+
+# Obsidian：配置入库，但界面状态和插件代码不入库
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/
+.obsidian/themes/

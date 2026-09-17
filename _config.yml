@@ -64,3 +64,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - .obsidian      # Obsidian 的配置，不发布
+  - _templates     # 新文章模板，不发布
