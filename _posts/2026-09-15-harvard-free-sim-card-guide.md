@@ -12,7 +12,7 @@ lang: zh
 
 在 **Smith Campus Center 8 楼 HIO（Harvard International Office）办公室门口**领取，给楼下保安看护照即可上楼。
 
-![](../assets/img/Camera_XHS_17894902820651040g00831o89ua8f526g5o4.jpg)
+![](../assets/img/2026-09-15-harvard-free-sim-card-guide/Camera_XHS_17894902820651040g00831o89ua8f526g5o4.jpg)
 ## 二、电话卡种类及套餐费用
 
 现场有两种运营商的卡片：
@@ -20,7 +20,7 @@ lang: zh
 **（1）US Mobile。** 哈佛免费提供 Starter Kit 套装，内含两张卡，分别连接至不同蜂窝网络运营商：Warp（Verizon）和 Dark Star（AT&T）。哈佛额外提供了官方的校园优惠码。
 不限量套餐含税 $199 一年。US Mobile 自家活动的优惠力度大于哈佛校园优惠。具体为 Unlimited Starter 套餐全年 $199，含无限流量、无限短信，以及拨打中国的无限量国际通话。
 
-![](../assets/img/Camera_XHS_17894903160371040g00831o89ua8f52305o4.jpg)
+![](../assets/img/2026-09-15-harvard-free-sim-card-guide/Camera_XHS_17894903160371040g00831o89ua8f52305o4.jpg)
 
 **（2）Mint。**
 不限量套餐宣称 $180 一年，实际马萨诸塞州含税约 $207 一年。不限量国际通话范围不包括中国。
