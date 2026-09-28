@@ -15,6 +15,10 @@
   一旦被外部引用就不要再改。sameAs 把这个节点接到 ORCID、GitHub 上，
   声明它们指的是同一个人——Linked Data 的「linked」就是指这个。
   字面量用 @value / @language 标了语言，中英文名是同一个属性的两个平行取值。
+  knowsAbout 前两项接到 Wikidata：Q1026962 数字人文、Q1929761 knowledge
+  organization。用的是 http://www.wikidata.org/entity/ 这个规范 IRI 形式，
+  不是 https、也不是 /wiki/ 那个网页地址，换了就接不上 Wikidata 的图。
+  第三项在 Wikidata 上没有对应条目，留作字符串——错误对齐不如不对齐。
   这里先硬编码，跑通之后再换成 site.orcid_url 之类的变量。
 {%- endcomment -%}
 <script type="application/ld+json">
@@ -32,8 +36,8 @@
     "https://github.com/thetaaaaa"
   ],
   "knowsAbout": [
-    {"@value": "数字人文", "@language": "zh-Hans"},
-    {"@value": "知识组织", "@language": "zh-Hans"},
+    {"@id": "http://www.wikidata.org/entity/Q1026962"},
+    {"@id": "http://www.wikidata.org/entity/Q1929761"},
     {"@value": "古籍文本自动化处理", "@language": "zh-Hans"}
   ]
 }
