@@ -1,6 +1,30 @@
 ---
 layout: default
 ---
+{%- comment -%}
+  这篇文章的结构化描述。字段全部从 front matter 和正文派生，不用手填。
+  author 只给一个 @id，不重复写姓名——它指向 head.html 里那段 Person。
+  两段 JSON 写在不同文件里，消费方靠这个共用的 @id 把它们合成一张图。
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": {{ page.url | absolute_url | jsonify }},
+  "@type": "BlogPosting",
+  "headline": [
+    {"@value": {{ page.title | jsonify }}, "@language": "zh-Hans"}{% if page.title_en %},
+    {"@value": {{ page.title_en | jsonify }}, "@language": "en"}{% endif %}
+  ],
+  {%- if page.summary %}
+  "description": {"@value": {{ page.summary | jsonify }}, "@language": "{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}"},
+  {%- endif %}
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "inLanguage": "{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}",
+  "wordCount": {{ content | strip_html | number_of_words: "auto" }},
+  "author": {"@id": "https://litaolin.com/#me"}
+}
+</script>
+
 <article class="essay">
 
   <div class="title-block">
