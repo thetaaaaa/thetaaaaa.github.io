@@ -4,6 +4,8 @@
 
 title: "Litao"                       # 站点名 / 你的名字
 title_en: "Litao"                    # 拉丁文写法，显示在名字下方
+author_name: "林立涛"
+author_name_en: "Litao Lin"
 tagline: "在美国的生活观察，个人研究和数据管理经验分享。"
 tagline_en: "Notes from a year in the US, and on how research datasets actually get built."
 
@@ -52,11 +54,14 @@ defaults:
       path: ""
     values:
       layout: "page"
-      image:                           # 分享预览图；某篇想单独换，在它的 front matter 里覆盖
-        path: /assets/img/og-card.png
-        width: 1200
-        height: 630
-        alt: "朱批红白文印「立」"
+
+# 品牌分享卡仅用于 Open Graph / Twitter，不作为文章的内容图片。
+# 文章可在 front matter 的 image 中指定相关图片（path、width、height、alt、lang）。
+social_image:
+  path: /assets/img/og-card.png
+  width: 1200
+  height: 630
+  alt: "朱批红白文印「立」"
 
 exclude:
   - Gemfile

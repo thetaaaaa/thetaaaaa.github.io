@@ -63,15 +63,27 @@ body {
 }
 
 /* 中文段落两端对齐：汉字等宽，不会出现西文那种断裂的空隙 */
-:lang(zh-Hans) .prose p,
-:lang(zh-Hans) .prose li,
-:lang(zh-Hans) .standfirst-zh {
+.prose p:lang(zh-Hans),
+.prose li:lang(zh-Hans),
+.standfirst-zh:lang(zh-Hans) {
   text-align: justify;
   text-justify: inter-ideograph;
   line-height: 1.9;
 }
 
 /* ── 顶栏 ────────────────────────────────────────────────── */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 
 .skip {
   position: absolute;
@@ -385,7 +397,7 @@ main {
 .prose .footnotes ol { padding-left: 1.2em; }
 .prose .footnotes li { margin-bottom: .625em; line-height: 1.75; }
 .prose .footnotes p { margin: 0; }
-:lang(zh-Hans) .prose .footnotes p { text-align: left; }
+.prose .footnotes p:lang(zh-Hans) { text-align: left; }
 
 /* ── 前后篇 ──────────────────────────────────────────────── */
 

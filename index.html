@@ -3,9 +3,11 @@ layout: default
 title: "写作"
 ---
 
+<h1 class="visually-hidden">{{ page.title | escape }}</h1>
+
 <div class="standfirst">
-  <p class="standfirst-zh">{{ site.tagline }}</p>
-  <p class="standfirst-en">{{ site.tagline_en }}</p>
+  <p class="standfirst-zh" lang="zh-Hans">{{ site.tagline }}</p>
+  <p class="standfirst-en" lang="en">{{ site.tagline_en }}</p>
 </div>
 
 <ol class="archive">
@@ -13,12 +15,12 @@ title: "写作"
   <li class="entry">
     <time class="entry-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m" }}</time>
     <div class="entry-body">
-      <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a class="entry-title" lang="{% if post.title_lang %}{{ post.title_lang }}{% elsif post.lang == 'en' %}en{% else %}zh-Hans{% endif %}" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       {%- if post.title_en %}
-      <span class="entry-title-en">{{ post.title_en }}</span>
+      <span class="entry-title-en" lang="en">{{ post.title_en | escape }}</span>
       {%- endif %}
       {%- if post.summary %}
-      <p class="entry-summary">{{ post.summary }}</p>
+      <p class="entry-summary" lang="{% if post.lang == 'en' %}en{% else %}zh-Hans{% endif %}">{{ post.summary }}</p>
       {%- endif %}
     </div>
   </li>

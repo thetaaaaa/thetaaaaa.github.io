@@ -1,16 +1,31 @@
 ---
 layout: default
 ---
+{%- if page.schema_type == 'AboutPage' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": {{ page.url | absolute_url | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "name": {"@value": {{ page.title | jsonify }}, "@language": "{{ page.title_lang | default: 'zh-Hans' }}"},
+  "description": {{ page.summary | jsonify }},
+  "inLanguage": "{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}",
+  "mainEntity": {"@id": {{ '/' | absolute_url | append: '#me' | jsonify }}},
+  "isPartOf": {"@id": {{ '/' | absolute_url | append: '#blog' | jsonify }}}
+}
+</script>
+{%- endif %}
 <article class="essay">
 
   <div class="title-block">
-    <h1>{{ page.title }}</h1>
+    <h1 lang="{% if page.title_lang %}{{ page.title_lang }}{% elsif page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">{{ page.title | escape }}</h1>
     {%- if page.title_en %}
-    <p class="title-en">{{ page.title_en }}</p>
+    <p class="title-en" lang="en">{{ page.title_en | escape }}</p>
     {%- endif %}
   </div>
 
-  <div class="prose">
+  <div class="prose" lang="{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">
     {{ content }}
   </div>
 

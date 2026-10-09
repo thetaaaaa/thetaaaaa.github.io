@@ -5,16 +5,16 @@
 </head>
 <body>
 
-<a class="skip" href="#main">跳到正文</a>
+<a class="skip" href="#main" lang="zh-Hans">跳到正文</a>
 
-<header class="masthead">
+<header class="masthead" lang="zh-Hans">
   <a class="masthead-name" href="{{ '/' | relative_url }}">
-    <span class="masthead-name-zh">{{ site.title }}</span>
+    <span class="masthead-name-zh" lang="en">{{ site.title }}</span>
     {%- if site.title_en and site.title_en != site.title %}
-    <span class="masthead-name-en">{{ site.title_en }}</span>
+    <span class="masthead-name-en" lang="en">{{ site.title_en }}</span>
     {%- endif %}
   </a>
-  <nav class="masthead-nav">
+  <nav class="masthead-nav" aria-label="主导航">
     <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>写作</a>
     <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>关于</a>
   </nav>

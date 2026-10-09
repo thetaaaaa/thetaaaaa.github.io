@@ -12,62 +12,64 @@ layout: default
   "@id": {{ page.url | absolute_url | jsonify }},
   "@type": "BlogPosting",
   "headline": [
-    {"@value": {{ page.title | jsonify }}, "@language": "zh-Hans"}{% if page.title_en %},
+    {"@value": {{ page.title | jsonify }}, "@language": "{% if page.title_lang %}{{ page.title_lang }}{% elsif page.lang == 'en' %}en{% else %}zh-Hans{% endif %}"}{% if page.title_en %},
     {"@value": {{ page.title_en | jsonify }}, "@language": "en"}{% endif %}
   ],
   {%- if page.summary %}
   "description": {"@value": {{ page.summary | jsonify }}, "@language": "{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}"},
   {%- endif %}
   "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-  "dateModified": {{ page.updated | default: page.date | date_to_xmlschema | jsonify }},
+  {%- if page.updated %}
+  "dateModified": {{ page.updated | date_to_xmlschema | jsonify }},
+  {%- endif %}
   "inLanguage": "{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}",
   "wordCount": {{ content | strip_html | number_of_words: "auto" }},
   "url": {{ page.url | absolute_url | jsonify }},
   {%- if page.image %}
   "image": {
     "@type": "ImageObject",
-    "url": {{ page.image.path | absolute_url | jsonify }},
-    "width": {{ page.image.width }},
-    "height": {{ page.image.height }},
-    "caption": {"@value": {{ page.image.alt | jsonify }}, "@language": "zh-Hans"}
+    "url": {{ page.image.path | absolute_url | jsonify }}{% if page.image.width %},
+    "width": {{ page.image.width | jsonify }}{% endif %}{% if page.image.height %},
+    "height": {{ page.image.height | jsonify }}{% endif %}{% if page.image.alt %},
+    "caption": {"@value": {{ page.image.alt | jsonify }}, "@language": "{% if page.image.lang %}{{ page.image.lang }}{% elsif page.lang == 'en' %}en{% else %}zh-Hans{% endif %}"}{% endif %}
   },
   {%- endif %}
-  "isPartOf": {"@id": "https://litaolin.com/#blog"},
-  "author": {"@id": "https://litaolin.com/#me"}
+  "isPartOf": {"@id": {{ '/' | absolute_url | append: '#blog' | jsonify }}},
+  "author": {"@id": {{ '/' | absolute_url | append: '#me' | jsonify }}}
 }
 </script>
 
 <article class="essay">
 
   <div class="title-block">
-    <h1>{{ page.title }}</h1>
+    <h1 lang="{% if page.title_lang %}{{ page.title_lang }}{% elsif page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">{{ page.title | escape }}</h1>
     {%- if page.title_en %}
-    <p class="title-en">{{ page.title_en }}</p>
+    <p class="title-en" lang="en">{{ page.title_en | escape }}</p>
     {%- endif %}
   </div>
 
-  <p class="dateline">
+  <p class="dateline" lang="zh-Hans">
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</time>
-    {%- if page.updated %}<span class="revised">修订于 {{ page.updated | date: "%Y 年 %-m 月" }}</span>{% endif %}
+    {%- if page.updated %}<span class="revised">修订于 <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: "%Y 年 %-m 月" }}</time></span>{% endif %}
   </p>
 
-  <div class="prose">
+  <div class="prose" lang="{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">
     {{ content }}
   </div>
 
 </article>
 
-<nav class="siblings" aria-label="其他文章">
+<nav class="siblings" aria-label="其他文章" lang="zh-Hans">
   {%- if page.previous %}
   <a class="sibling" href="{{ page.previous.url | relative_url }}">
     <span class="sibling-role">上一篇</span>
-    <span class="sibling-title">{{ page.previous.title }}</span>
+    <span class="sibling-title" lang="{% if page.previous.title_lang %}{{ page.previous.title_lang }}{% elsif page.previous.lang == 'en' %}en{% else %}zh-Hans{% endif %}">{{ page.previous.title | escape }}</span>
   </a>
   {%- endif %}
   {%- if page.next %}
   <a class="sibling sibling-fwd" href="{{ page.next.url | relative_url }}">
     <span class="sibling-role">下一篇</span>
-    <span class="sibling-title">{{ page.next.title }}</span>
+    <span class="sibling-title" lang="{% if page.next.title_lang %}{{ page.next.title_lang }}{% elsif page.next.lang == 'en' %}en{% else %}zh-Hans{% endif %}">{{ page.next.title | escape }}</span>
   </a>
   {%- endif %}
 </nav>

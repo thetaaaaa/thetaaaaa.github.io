@@ -1,14 +1,14 @@
-<footer class="colophon">
+<footer class="colophon" lang="zh-Hans">
   <p class="colophon-links">
     <a href="{{ '/feed.xml' | relative_url }}">订阅 RSS</a>
     <a href="mailto:{{ site.email }}">写信给我</a>
-    {%- if site.github_username %}
+    {%- if site.github_username and site.github_username != empty %}
     <a href="https://github.com/{{ site.github_username }}" rel="me noopener">GitHub</a>
     {%- endif %}
-    {%- if site.xiaohongshu_url %}
+    {%- if site.xiaohongshu_url and site.xiaohongshu_url != empty %}
     <a href="{{ site.xiaohongshu_url }}" rel="me noopener">小红书</a>
     {%- endif %}
-    {%- if site.orcid_url %}
+    {%- if site.orcid_url and site.orcid_url != empty %}
     <a href="{{ site.orcid_url }}" rel="me noopener">ORCID</a>
     {%- endif %}
   </p>
