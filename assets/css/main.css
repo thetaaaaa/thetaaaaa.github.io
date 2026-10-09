@@ -264,6 +264,12 @@ main {
 
 .prose p { margin: 0 0 1.4em; }
 
+.prose-justify > p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
 .prose h2 {
   margin: 2.75rem 0 1rem;
   font-family: var(--han), var(--latin);

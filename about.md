@@ -4,6 +4,7 @@ title: "关于"
 title_en: "About"
 permalink: /about/
 lang: en
+prose_align: justify
 title_lang: zh-Hans
 schema_type: AboutPage
 summary: "Litao Lin is a Ph.D. candidate in Library and Information Science at Nanjing University, studying places in Chinese historical texts through NLP, linked data, and historical GIS."

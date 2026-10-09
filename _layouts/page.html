@@ -25,7 +25,7 @@ layout: default
     {%- endif %}
   </div>
 
-  <div class="prose" lang="{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">
+  <div class="prose{% if page.prose_align == 'justify' %} prose-justify{% endif %}" lang="{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">
     {{ content }}
   </div>
 
