@@ -10,6 +10,7 @@
   --ink-soft:   #5a5f66;
   --ink-faint:  #8b9096;
   --rule:       #d8dbd6;
+  --table-rule: #b9c0b8;
   --seal:       #8e2c3b;
 
   --latin: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -34,6 +35,7 @@ html[data-type="sans"] {
     --ink-soft:   #a2a7a9;
     --ink-faint:  #71767a;
     --rule:       #2f3236;
+    --table-rule: #50565e;
     --seal:       #cf6b74;
   }
 }
@@ -260,9 +262,28 @@ main {
 }
 .revised { margin-left: .75rem; }
 
-.prose > *:first-child { margin-top: 0; }
-
-.prose p { margin: 0 0 1.4em; }
+/* Tailwind Typography handles body elements; these rules retain the site palette. */
+.prose {
+  max-width: none;
+  --tw-prose-body: var(--ink);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-lead: var(--ink-soft);
+  --tw-prose-links: var(--ink);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-counters: var(--ink-soft);
+  --tw-prose-bullets: var(--ink-faint);
+  --tw-prose-hr: var(--rule);
+  --tw-prose-quotes: var(--ink-soft);
+  --tw-prose-quote-borders: var(--rule);
+  --tw-prose-captions: var(--ink-soft);
+  --tw-prose-kbd: var(--ink);
+  --tw-prose-kbd-shadows: 90 95 102;
+  --tw-prose-code: var(--ink);
+  --tw-prose-pre-code: var(--ink);
+  --tw-prose-pre-bg: var(--paper-well);
+  --tw-prose-th-borders: var(--rule);
+  --tw-prose-td-borders: var(--rule);
+}
 
 .prose-justify > p {
   text-align: justify;
@@ -270,24 +291,7 @@ main {
   hyphens: auto;
 }
 
-.prose h2 {
-  margin: 2.75rem 0 1rem;
-  font-family: var(--han), var(--latin);
-  font-size: 1.1875rem;
-  font-weight: 600;
-  line-height: 1.55;
-}
-.prose h3 {
-  margin: 2rem 0 .75rem;
-  font-family: var(--han), var(--latin);
-  font-size: 1.0625rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-
-.prose a {
-  color: var(--ink);
-  text-decoration: underline;
+.prose a:not(.heading-anchor) {
   text-decoration-color: var(--rule);
   text-decoration-thickness: 1px;
   text-underline-offset: .18em;
@@ -297,57 +301,37 @@ main {
   text-decoration-color: var(--seal);
 }
 
-.prose blockquote {
-  margin: 1.75rem 0;
-  padding: 0 0 0 1.125rem;
-  border-left: 1px solid var(--rule);
-  color: var(--ink-soft);
-  font-size: 1.0625rem;
-}
-.prose blockquote p:last-child { margin-bottom: 0; }
+/* Chinese quotations use the author's punctuation rather than generated quotes. */
+.prose blockquote:lang(zh-Hans) { font-style: normal; }
+.prose blockquote:lang(zh-Hans) p::before,
+.prose blockquote:lang(zh-Hans) p::after { content: none; }
 
-.prose ul, .prose ol { margin: 0 0 1.4em; padding-left: 1.4em; }
-.prose li { margin-bottom: .4em; }
-
-.prose hr {
-  margin: 2.75rem auto;
-  width: 3.5rem;
-  border: 0;
-  border-top: 1px solid var(--rule);
-}
-
-.prose img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 2rem auto;
-}
-
-.prose figure { margin: 2rem 0; }
-.prose figcaption {
-  margin-top: .625rem;
-  font-family: var(--han), var(--latin);
-  font-size: .8125rem;
-  line-height: 1.7;
-  color: var(--ink-faint);
-}
-
+.prose img { height: auto; }
 .prose code {
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  font-size: .875em;
+  overflow-wrap: anywhere;
   background: var(--paper-well);
   padding: .1em .35em;
-  border-radius: 2px;
+  border-radius: 3px;
 }
-.prose pre {
-  margin: 1.75rem 0;
-  padding: 1rem 1.125rem;
-  background: var(--paper-well);
+.prose code::before, .prose code::after { content: none; }
+.prose pre code { background: none; padding: 0; overflow-wrap: normal; }
+
+/* Borders remain visible in both themes; wide tables scroll inside the article. */
+.prose table {
+  display: block;
+  max-width: 100%;
   overflow-x: auto;
-  font-size: .8125rem;
-  line-height: 1.6;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
 }
-.prose pre code { background: none; padding: 0; }
+.prose th, .prose td {
+  min-width: 7rem;
+  padding: .75em 1em;
+  border: 1px solid var(--table-rule);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.prose th { background: var(--paper-well); }
 
 /* ── 标题锚 ──────────────────────────────────────────────── */
 
@@ -495,6 +479,9 @@ main {
     --ink-faint: #555; --rule: #bbb; --seal: #000;
   }
   body { font-size: 11pt; padding: 0; }
+  .prose { font-size: inherit; }
+  .prose table { display: table; width: 100%; overflow: visible; }
+  .prose th, .prose td { min-width: 0; }
   .masthead-nav, .siblings, .colophon-links, .skip { display: none; }
   .heading-anchor { display: none; }
   .prose a { text-decoration: none; }

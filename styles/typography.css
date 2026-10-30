@@ -1,0 +1,6 @@
+/* Typography only: omit Preflight to preserve the site's layout and base styles. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@source "../_layouts";
+@plugin "@tailwindcss/typography";

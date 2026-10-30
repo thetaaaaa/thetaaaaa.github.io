@@ -21,6 +21,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: 构建正文样式
+        run: |
+          npm ci
+          npm run build:css
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"

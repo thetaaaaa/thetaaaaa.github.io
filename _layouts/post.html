@@ -53,7 +53,7 @@ layout: default
     {%- if page.updated %}<span class="revised">修订于 <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: "%Y 年 %-m 月" }}</time></span>{% endif %}
   </p>
 
-  <div class="prose" lang="{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">
+  <div class="prose prose-lg" lang="{% if page.lang == 'en' %}en{% else %}zh-Hans{% endif %}">
     {{ content }}
   </div>
 

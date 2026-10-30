@@ -1,0 +1,16 @@
+{
+  "name": "litaolin-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles/typography.css -o ./assets/css/typography.css --minify",
+    "watch:css": "tailwindcss -i ./styles/typography.css -o ./assets/css/typography.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "@tailwindcss/typography": "0.5.20",
+    "tailwindcss": "4.3.3"
+  },
+  "overrides": {
+    "postcss-selector-parser": "^6.1.5"
+  }
+}

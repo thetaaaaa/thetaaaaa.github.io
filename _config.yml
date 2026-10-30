@@ -64,6 +64,10 @@ social_image:
   alt: "朱批红白文印「立」"
 
 exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - styles
   - Gemfile
   - Gemfile.lock
   - README.md

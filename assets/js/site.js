@@ -8,7 +8,7 @@
   /* kramdown 已经生成了 id，这里只补一个可点的链接 */
   prose.querySelectorAll('h2[id], h3[id]').forEach(function (h) {
     var a = document.createElement('a');
-    a.className = 'heading-anchor';
+    a.className = 'heading-anchor not-prose';
     a.href = '#' + h.id;
     a.setAttribute('aria-label', '指向本节的链接');
     a.textContent = '§';
