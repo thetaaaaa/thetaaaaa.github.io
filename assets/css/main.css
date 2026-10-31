@@ -306,7 +306,13 @@ main {
 .prose blockquote:lang(zh-Hans) p::before,
 .prose blockquote:lang(zh-Hans) p::after { content: none; }
 
-.prose img { height: auto; }
+/* Preflight is off, so images need their own width cap. */
+.prose img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
 .prose code {
   overflow-wrap: anywhere;
   background: var(--paper-well);
