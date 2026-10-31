@@ -3,11 +3,13 @@
   "private": true,
   "scripts": {
     "build:css": "tailwindcss -i ./styles/typography.css -o ./assets/css/typography.css --minify",
-    "watch:css": "tailwindcss -i ./styles/typography.css -o ./assets/css/typography.css --watch"
+    "watch:css": "tailwindcss -i ./styles/typography.css -o ./assets/css/typography.css --watch",
+    "highlight": "node scripts/highlight.mjs _site"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.3",
     "@tailwindcss/typography": "0.5.20",
+    "shiki": "4.5.0",
     "tailwindcss": "4.3.3"
   },
   "overrides": {

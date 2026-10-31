@@ -44,6 +44,9 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: 代码高亮
+        run: npm run highlight
+
       - uses: actions/upload-pages-artifact@v3
 
   deploy:

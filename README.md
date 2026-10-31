@@ -24,3 +24,9 @@ bundle exec jekyll serve
 ```
 
 调整 `styles/typography.css` 或模板后重新运行 `npm run build:css`，也可另开终端运行 `npm run watch:css`。生成的 `assets/css/typography.css` 不入库，GitHub Actions 会在 Jekyll 构建前生成。
+
+## 代码高亮
+
+代码块由 Shiki 上色（亮色 github-light、暗色 github-dark，跟随系统切换）。kramdown 不再调用 Rouge，GitHub Actions 在 `jekyll build` 之后运行 `npm run highlight`，由 `scripts/highlight.mjs` 改写 `_site` 里的 HTML。代码块要写明语言（如 ` ```bash `）才会上色。
+
+`jekyll serve` 的本地预览不经过这一步，代码块是无色的。要看高亮效果，先 `bundle exec jekyll build`，再 `npm run highlight`，然后打开 `_site` 里的页面。

@@ -57,7 +57,7 @@ Cloudflare 的 DNS 记录有个代理开关，橙云表示流量经过 Cloudflar
 
 试着把站点迁到 Cloudflare Pages 做备选方案时，构建失败了：
 
-```
+```text
 Invalid US-ASCII character "\xE2" on line 5
 ```
 
@@ -65,7 +65,7 @@ Invalid US-ASCII character "\xE2" on line 5
 
 加两条环境变量解决：
 
-```
+```dotenv
 LANG=C.UTF-8
 LC_ALL=C.UTF-8
 ```
@@ -90,7 +90,7 @@ LC_ALL=C.UTF-8
 
 ## 现在的架构
 
-```
+```text
 域名所有权    Cloudflare Registrar
 DNS 解析      Cloudflare
 源码和版本    GitHub

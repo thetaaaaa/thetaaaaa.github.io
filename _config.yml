@@ -32,6 +32,8 @@ kramdown:
   input: GFM
   footnote_nr: 1
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable: true          # 代码高亮交给 Shiki，构建后由 scripts/highlight.mjs 处理
   smart_quotes: ["apos", "apos", "quot", "quot"]
 
 permalink: /:year/:slug/
@@ -68,6 +70,7 @@ exclude:
   - package.json
   - package-lock.json
   - styles
+  - scripts
   - Gemfile
   - Gemfile.lock
   - README.md
