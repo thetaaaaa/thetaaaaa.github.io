@@ -1,5 +1,5 @@
 ---
-title: "J-1 研究学者的“百万撤离”"
+title: "J-1 研究学者的“百万撤离”计划"
 title_en: "Email Benefits, Phone Numbers, and Bank Accounts for Departing J-1 Scholars"
 summary: "美国电子羊毛"
 date: 2026-10-14
