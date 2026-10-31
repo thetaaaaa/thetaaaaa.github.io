@@ -25,6 +25,10 @@ bundle exec jekyll serve
 
 调整 `styles/typography.css` 或模板后重新运行 `npm run build:css`，也可另开终端运行 `npm run watch:css`。生成的 `assets/css/typography.css` 不入库，GitHub Actions 会在 Jekyll 构建前生成。
 
+## 图片放大
+
+正文图片可点击放大，用的是 medium-zoom。`npm run build:js` 把它从 `node_modules` 复制到 `assets/js/medium-zoom.min.js`（不入库，GitHub Actions 构建前生成），由站点自己托管，不走 CDN。本地预览前也要先运行一次。包在链接里的图片不放大。
+
 ## 代码高亮
 
 代码块由 Shiki 上色（亮色 github-light、暗色 github-dark，跟随系统切换）。kramdown 不再调用 Rouge，GitHub Actions 在 `jekyll build` 之后运行 `npm run highlight`，由 `scripts/highlight.mjs` 改写 `_site` 里的 HTML。代码块要写明语言（如 ` ```bash `）才会上色。

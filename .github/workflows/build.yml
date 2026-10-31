@@ -26,10 +26,11 @@ jobs:
           node-version: "22"
           cache: npm
 
-      - name: 构建正文样式
+      - name: 构建正文样式和脚本
         run: |
           npm ci
           npm run build:css
+          npm run build:js
 
       - uses: ruby/setup-ruby@v1
         with:

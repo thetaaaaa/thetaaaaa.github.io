@@ -4,6 +4,7 @@ _site/
 .jekyll-metadata
 node_modules/
 assets/css/typography.css
+assets/js/medium-zoom.min.js
 
 # Bundler（本地预览用，不入库）
 vendor/

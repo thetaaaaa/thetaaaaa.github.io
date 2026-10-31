@@ -4,11 +4,13 @@
   "scripts": {
     "build:css": "tailwindcss -i ./styles/typography.css -o ./assets/css/typography.css --minify",
     "watch:css": "tailwindcss -i ./styles/typography.css -o ./assets/css/typography.css --watch",
+    "build:js": "node -e \"require('fs').copyFileSync('node_modules/medium-zoom/dist/medium-zoom.min.js', 'assets/js/medium-zoom.min.js')\"",
     "highlight": "node scripts/highlight.mjs _site"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.3",
     "@tailwindcss/typography": "0.5.20",
+    "medium-zoom": "1.1.2",
     "shiki": "4.5.0",
     "tailwindcss": "4.3.3"
   },

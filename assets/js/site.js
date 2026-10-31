@@ -1,4 +1,4 @@
-/* 给正文标题加一个可点的锚。无依赖，无第三方请求，失败时页面照常可读。 */
+/* 给正文标题加一个可点的锚，正文图片点击放大。无第三方请求，失败时页面照常可读。 */
 (function () {
   'use strict';
 
@@ -14,4 +14,12 @@
     a.textContent = '§';
     h.appendChild(a);
   });
+
+  /* 正文图片点击放大。medium-zoom 随站点一起发布，没加载到就跳过；带链接的图片不放大 */
+  if (window.mediumZoom) {
+    var imgs = Array.prototype.filter.call(prose.querySelectorAll('img'), function (img) {
+      return !img.closest('a');
+    });
+    window.mediumZoom(imgs, { margin: 24, background: 'var(--paper)' });
+  }
 })();
