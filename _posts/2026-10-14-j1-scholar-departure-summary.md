@@ -22,11 +22,11 @@ lang: zh
 
 目标：低成本保号，兼顾用于接收各类验证码。
 
-| 方案 | 费用与限制 | 注意事项 |
+| 方案 | 功能及费用 | 注意事项 |
 | --- | --- | --- |
-| [Google Voice](https://support.google.com/voice/answer/1065667?hl=en) | 使用方式（1）：将现有手机号转入 Google Voice 以长期保留，需支付一次性转入费 20 美元；使用方式（2）：在 Google Voice 申领免费新号作为备用号码。 | 需在美国办理，号码须有效且符合转入条件；部分机构不接受虚拟号码验证 |
-| [Tello](https://tello.com/buy/custom_plans) | 持续支付套餐费；境外可用 [Wi-Fi Calling](https://tello.com/help_center/service-issues-troubleshooting/how-is-wi-fi-calling-texting-charged)。 | 需在离美前确认设备支持并完成设置；每月费用为 5 美元 + 税 |
-
+| 将已有手机号转入 [Tello](https://tello.com/buy/custom_plans) | 基于可靠的移动通信线路收发短信、拨打电话。境外支持使用 [Wi-Fi Calling](https://tello.com/help_center/service-issues-troubleshooting/how-is-wi-fi-calling-texting-charged) 使用套餐内通话额度而无需支付额外的漫游通信费用。 | 需在离美前确认设备支持并完成设置；每月费用为 5 美元 + 税 |
+| 将已有手机号转入 [Google Voice](https://support.google.com/voice/answer/1065667?hl=en) | 将现有手机号转入 Google Voice 以长期保留，需支付一次性转入费 20 美元。基于互联网电话服务（VoIP）收发短信、拨打电话。 | 需在美国办理，号码须有效且符合转入条件 |
+| 在 [Google Voice](https://support.google.com/voice/answer/1065667?hl=en) 申请新号 | 首个新号码免费。基于互联网电话服务（VoIP）收发短信、拨打电话。 | 部分机构不接受虚拟号码验证。 |
 
 ## 银行账户保号
 
@@ -38,10 +38,9 @@ lang: zh
 | Chase | 优势：数字借记卡在卡片到期后自动更新，长期可用；不足：实体借记卡无法由 Chase 直接寄往中国 |
 | Charles Schwab | 美国本土账户转为[国际账户](https://international.schwab.com/open-account-intro)后可以长期使用；银行卡可以直接寄往中国 |
 
-
 ## 美国土特产之 USB 安全密钥
 
-目标：在银行交易、AI 平台登录等场景的网络安全验证环节，减少甚至免除对美国手机号的依赖。例如 Bank of America 的 [USB 安全密钥](https://secure.bankofamerica.com/auth/security-center/additional-security-features/?request_locale=en_US)可替代部分转账及登录场景的短信验证。
+目标：在银行交易、AI 平台登录等场景的网络安全验证环节，减少甚至免除对美国手机号的依赖。例如 Bank of America 的 [USB 安全密钥](https://secure.bankofamerica.com/auth/security-center/additional-security-features/?request_locale=en_US) 可替代部分转账及登录场景的短信验证。
 
 选购条件：FIDO2 认证；USB-A 或 USB-C 接口适配电脑。详见[银行要求](https://secure.bankofamerica.com/auth/security-center/additional-security-features/?request_locale=en_US)。
 
