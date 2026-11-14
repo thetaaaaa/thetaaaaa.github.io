@@ -1,5 +1,5 @@
 ---
-title: "哈佛大学免费电话卡攻略：美国三大运营商横评"
+title: "哈佛大学免费电话卡领取攻略及信号质量横评"
 title_en: "Harvard Free SIM Card Guide: Three Major U.S. Carriers Compared"
 summary: "哈佛 HIO 免费电话卡的领取地点、US Mobile 与 Mint 套餐对比，以及 Warp、Dark Star、Light Speed 的实际使用体验。"
 date: 2026-09-15
@@ -7,12 +7,14 @@ lang: zh
 ---
 ## 引言
 
-哈佛大学国际办公室提供免费的实体电话卡，卡片自行上门领取，领取后需要自行开通运营商套餐以获得手机号和通讯服务。
+哈佛大学国际办公室（HIO）提供免费的实体电话卡，卡片自行上门领取，领取后需要自行开通运营商套餐以获得手机号和通讯服务。
+
 ## 一、领取地点
 
 在 **Smith Campus Center 8 楼 HIO（Harvard International Office）办公室门口**领取，给楼下保安看护照即可上楼。
 
 ![哈佛国际办公室免费电话卡领取现场](../assets/img/2026-09-15-harvard-free-sim-card-guide/Camera_XHS_17894902820651040g00831o89ua8f526g5o4.jpg)
+
 ## 二、电话卡种类及套餐费用
 
 现场有两种运营商的卡片：
@@ -24,7 +26,8 @@ lang: zh
 
 **（2）Mint。**
 不限量套餐宣称 $180 一年，实际马萨诸塞州含税约 $207 一年。不限量国际通话范围不包括中国。
-## 三、使用体验（面向马萨诸塞州）
+
+## 三、哈佛园附近使用体验
 
 激活前需要先把手机 IMEI 发给客服，确认兼容性。我就是吃了兼容性的亏。
 

@@ -12,5 +12,3 @@ lang: zh
 <div class="embed">
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1Sxk3BpEQA&amp;autoplay=0&amp;high_quality=1&amp;danmaku=0" title="实地探访纽约中央车站" loading="lazy" scrolling="no" frameborder="no" allowfullscreen></iframe>
 </div>
-
-播放器加载不出来的话，[直接去 B 站看](https://www.bilibili.com/video/BV1Sxk3BpEQA/)。
